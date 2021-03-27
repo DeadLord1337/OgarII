@@ -34,6 +34,10 @@ Your friendly agar.io private server recreation.
 
 6. `node index.js`
 
+## Connect to Agar.io client.
+1. Open browse console "F12".
+2. Сopy and paste this - `core.disableIntegrityChecks(true); core.connect("ws://localhost:443");`
+
 ## Configuring
 
 - After your first run, OgarII will drop two files in `cli/` / working directory: `log-settings.json` and `settings.json`.
