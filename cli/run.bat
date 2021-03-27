@@ -1,2 +1,2 @@
-node ../cli/index.js
+node index.js
 pause
