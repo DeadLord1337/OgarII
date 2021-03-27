@@ -1,4 +1,7 @@
 const Bot = require("./Bot");
+const path = require('path')
+const fs = require('fs')
+const botNames = fs.readFileSync(path.resolve('../src/bots/botNames.txt'), 'utf8').split(/\r?\n/);
 
 class PlayerBot extends Bot {
     /**
@@ -30,7 +33,8 @@ class PlayerBot extends Bot {
             const names = this.listener.settings.worldPlayerBotNames;
             const skins = this.listener.settings.worldPlayerBotSkins;
             /** @type {string} */
-            this.spawningName = names[~~(Math.random() * names.length)] || "Player bot";
+            //this.spawningName = names[~~(Math.random() * names.length)] || "Player bot";
+            this.spawningName = botNames[Math.floor(Math.random() * Math.floor(botNames.length))];
             if (this.spawningName.indexOf("<*>") !== -1)
                 this.spawningName = this.spawningName.replace("<*>", `<${skins[~~(Math.random() * skins.length)]}>`);
             this.onSpawnRequest();
