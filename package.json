@@ -17,6 +17,8 @@
         "url": "https://github.com/Luka967/OgarII/issues"
     },
     "dependencies": {
-        "uws": "10.148.1"
+        "uws": "10.148.1",
+        "path": "latest",
+        "fs": "latest"
     }
 }
